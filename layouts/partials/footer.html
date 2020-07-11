@@ -8,7 +8,7 @@
           {{- range sort .Site.Data.sections "section.weight" }}
             {{ if .section.enable }}
             <li class="nav-item">
-              <a class="smooth-scroll" href="#{{ replace (lower .section.name) " " "-" }}">{{ .section.name }}</a>
+              <a class="smooth-scroll" href="{{ .Site.BaseURL }}/#{{ replace (lower .section.name) " " "-" }}">{{ .section.name }}</a>
             </li>
             {{ end }}
           {{- end }}
